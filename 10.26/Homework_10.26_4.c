@@ -10,7 +10,7 @@ int main() {
     int i = 0;
     double sum1 = 0.0;
     for (i = a; i <= b; i += 2) {
-        sum1 += 1.0 / i;  //1.0
+        sum1 += 1.0 / i;  //1.0£¬·ñÔò»á³ö´í
     }
 
     double sum2 = 0.0;

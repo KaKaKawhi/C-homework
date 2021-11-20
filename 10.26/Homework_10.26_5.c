@@ -14,7 +14,7 @@ int main() {
 		scanf("%d", &arr[i]);  //不用写成arr[i] = scanf("%d",&x)
 	}
 
-	int max = arr[0];
+	int max = arr[0];      //先挑出来一个人上擂台，其他人攻擂
 	for (i = 1; i < num; i++) {
 		if (arr[i] > max) {
 			max = arr[i];
