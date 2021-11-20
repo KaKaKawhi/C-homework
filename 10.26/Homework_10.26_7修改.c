@@ -2,7 +2,7 @@
 
 #include<stdio.h>
 
-//计算1!+2!+3!+...+10!
+//查下标
 int find(int n, int arr[],int length) {
     int left = 0;
     int right = length-1;
