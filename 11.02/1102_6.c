@@ -21,11 +21,32 @@
 //    }
 //}
 
+int my_strlen(char* arr) { //使用自己写的求字符串长度函数
+    int count = 0;
+    while (*arr != '\0') {
+        count++;
+        arr++;
+    }
+    return count;
+}
+
 //使用递归实现字符串逆序
 void reverse_string(char* arr) {
-    char* left = arr;
-    char* right = arr + strlen(arr) - 1;
-    不会！
+    // 不会！-------->
+    // 首先，如果逆序abcde，相当于逆序a和e然后逆序bcd，但是，这样的话，
+    // \0在最后，你无法以它为结束标志（bcde无法看作一个字符串了）
+    // 所以先将a取到tmp中，然后e放在a位置，然后\0放在e的位置，然后递归传入
+    // b的地址，这样下次分析就会以"bcde"来调用函数
+    // 以上递归的限制条件为剩下的元素个数大于2个才有必要交换
+        int len = my_strlen(arr);
+        char tmp = *arr;
+        *arr = *(arr + len - 1);
+        *(arr + len - 1) = '\0';
+        if (my_strlen(arr + 1) >= 2) {    //剩下的元素个数大于2个才有必要交换
+            reverse_string(arr + 1);
+        }
+        *(arr + len - 1) = tmp;            //递归结束后才把a放在e的位置上，实现交换
+
 }
 
 int main()
