@@ -11,11 +11,11 @@ int main() {
                         //可以写成while(scanf("%d", &n) != EOF)   end of file
                         //相当于while(~scanf("%d", &n))
         if (n % 2 == 0) {
-            printf("Even\n");
+            printf("Even\n");  //oj小心，必须加换行才格式一样
             break;
         }
         else {  //n % 2只可能为0 或 1
-            printf("Odd\n");
+            printf("Odd\n");    //oj小心，必须加换行才格式一样
             break;
         }
     }

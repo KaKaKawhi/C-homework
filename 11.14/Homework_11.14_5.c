@@ -27,12 +27,12 @@ int main() {
         for (i = 0; i < strlen(arr); i++) {
             if (arr[i] == word) {
                 index = 1;
-                printf("Vowel\n");
+                printf("Vowel\n");   //oj小心，必须加换行才格式一样
                 break;
             }
         }
         if (0 == index) {       //或者if（i == 10）
-            printf("Consonant\n");
+            printf("Consonant\n");  //oj小心，必须加换行才格式一样
         }
     }
 
