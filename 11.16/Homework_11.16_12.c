@@ -42,7 +42,7 @@ int main() {
     //}
 
     ////2. 计算每一位的次方和
-    //tmp = i;
+    //tmp = i;         //防止循环变量乱改变
     //while (tmp)
     //{
     //    sum += pow(tmp % 10, count);

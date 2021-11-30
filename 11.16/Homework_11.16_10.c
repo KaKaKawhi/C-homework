@@ -29,9 +29,9 @@ void reverse(char * p, int length) {
 
 int main() {
 
-    char arr[] = "abcdef";
+    char arr[] = "abcdef";  //如果要手动输入要用gets（），因为如果需要的字符串有空格，scanf遇到空格就停止
     int length = sizeof(arr) / sizeof(arr[0]);  //这个元素个数包含了\0 
-    reverse(arr,length);
+    reverse(arr,length);  //也可以不用传入length，用strlen函数
 
     return 0;
 }

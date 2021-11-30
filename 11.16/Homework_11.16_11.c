@@ -19,7 +19,7 @@ int main()
 	int tmp = 0;
 
 
-	scanf("%d%d", &a, &n);
+	scanf("%d%d", &a, &n);//输入之间要加空格   和scanf（“%d %d”,...） 同理
 	for (i = 0; i < n; i++)
 	{
 		tmp = tmp * 10 + a;
