@@ -22,7 +22,10 @@ int main()
 	scanf("%d%d", &a, &n);//输入之间要加空格   和scanf（“%d %d”,...） 同理
 	for (i = 0; i < n; i++)
 	{
-		tmp = tmp * 10 + a;
+		tmp = tmp * 10 + a; //把每一项都联系起来!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+							//思路
+							// i=0		i=1		i=2		  i=3		
+							// 2		2*10+2	22*10+2	  222*10+2
 		sum += tmp;
 	}
 	printf("%d\n", sum);
@@ -30,3 +33,21 @@ int main()
 	return 0;
 }
 
+//自己写的，思路
+// i=0		i=1		i=2		i=3		
+// 2		2+20	22+200	222+2000
+//int main() {
+//
+//	int a = 0;
+//	int n = 0;
+//	scanf("%d %d", &a, &n);
+//	int i = 0;
+//	int sum = 0;
+//	int time = 1;
+//	for (i = 0; i < n; i++) {
+//		sum += a * time;
+//		time *= 10;
+//	}
+//
+//	return 0;
+//}
