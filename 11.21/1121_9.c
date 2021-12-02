@@ -22,10 +22,21 @@ char* my_strcpy(char* to, const char* from) {
     return to;
 }
 
+//答案：
+//char* my_strcpy(char* dst, const char* src)
+//{
+//    char* cp = dst;
+//    while (*cp++ = *src++);
+//    return(dst);
+//}
+
+//自己后来写的版本,to字符数组不是空数组！！！！见另一个文件
+
 int main()
 {
     char to[20] = "\0";
     char from[] = "hello";
+    //printf("%d\n", strlen(my_strcpy(to, from)));  //检测'\0'(加头文件)
     printf("%s\n", my_strcpy(to, from));
 
     return 0;
