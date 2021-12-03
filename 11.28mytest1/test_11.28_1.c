@@ -38,7 +38,27 @@ int main() {
             i++;
         }
         printf("%d\n", a * i);
+
+        //½²£¡£¡£¡
+        //·¨1£º
+        /*int max = a > b ? a : b;
+        while(1){
+            if((max % a == 0) && (max % b == 0)){
+                break;
+            }
+            max++;
+        }
+        printf("%d\n", max);
+        */
+        //·¨2£º
+        /*int i = 1;
+        while ((i * a) % b != 0) {
+            i++;
+        }
+        printf("%d\n", i * a);*/
     }
 
     return 0;
 }
+
+

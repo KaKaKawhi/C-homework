@@ -20,13 +20,17 @@ void adjust_arr(int* arr, int len) {
     int* left = arr;
     int* right = arr + (len - 1);
     while (left < right) {
-        while (left < right && (*left % 2 != 0)) {  //限制条件必须加，否则会栈溢出
+        //限制条件必须加，否则全为奇数或奇数时，会出现越界问题，一直找找到偶数才会停下来
+        while (left < right && (*left % 2 != 0)) {  
             left++;
         }
-        while (left < right && (*right % 2 == 0)) {//限制条件必须加，否则会栈溢出
+        //限制条件必须加，否则全为奇数或奇数时，会出现越界问题，一直找找到奇数才会停下来
+        while (left < right && (*right % 2 == 0)) {
             right--;
         }
-        if (left < right) {//限制条件必须加，否则会栈溢出
+        if (left < right) {//限制条件必须加，否则当进入循环L和R相邻，
+                            //可能上述两个代码都执行，然后会交错，导致这一步会
+                            //将交错后的位置的奇偶数字又交换了回去
             int tmp = *right;
             *right = *left;
             *left = tmp;

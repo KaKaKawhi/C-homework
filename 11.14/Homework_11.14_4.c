@@ -12,11 +12,11 @@ int main() {
                         //相当于while(~scanf("%d", &n))
         if (n % 2 == 0) {
             printf("Even\n");  //oj小心，必须加换行才格式一样
-            break;
+            //break;    不需要break，条件分叉，执行了这个就不执行另外一个，就结束了
         }
         else {  //n % 2只可能为0 或 1
             printf("Odd\n");    //oj小心，必须加换行才格式一样
-            break;
+            //break;     同上
         }
     }
 
