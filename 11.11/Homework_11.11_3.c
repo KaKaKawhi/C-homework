@@ -25,12 +25,24 @@ int diff(int a, int b) {
         }
         mask >>= 1;
     }
+
     //方法2：
     /*while (mask) {
         mask = (mask - 1) & mask; 每次去除掉mask的二进制序列的最右边的一个1
         count++;
     }*/
+
+    //方法3：分别与1来与相比较，然后同时右移
+    /*int i = 0;
+    for (i = 0; i < 32; i++) {
+        if ((i & a) == (i & b)) {
+            count++;
+        }
+        a >>= 1;
+        b >>= 1;
+    }*/
+
     return count;
 }
 
-//方法2：分别与1来与相比较，然后同时右移
+
