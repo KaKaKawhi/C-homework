@@ -36,6 +36,19 @@ void reverse(int arr[], int length) {
     }
 }
 
+//÷∏’Î∑Ω∑®£∫
+//void reverse(int arr[], int size) {
+//    int* left = arr;
+//    int* right = arr + size - 1;
+//    while (left < right) {
+//        int tmp = *left;
+//        *left = *right;
+//        *right = tmp;
+//        left++;
+//        right--;
+//    }
+//}
+
 int main()
 {
     int arr[] = { 0,6,3,5,62,1,8 };
