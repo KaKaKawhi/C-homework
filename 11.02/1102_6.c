@@ -38,6 +38,7 @@ void reverse_string(char* arr) {
     // 所以先将a取到tmp中，然后e放在a位置，然后\0放在e的位置，然后递归传入
     // b的地址，这样下次分析就会以"bcde"来调用函数
     // 以上递归的限制条件为剩下的元素个数大于2个才有必要交换
+        //必须写出来，不能用一次调用一次，因为之后str的长度已经发生变化了
         int len = my_strlen(arr);
         char tmp = *arr;
         *arr = *(arr + len - 1);

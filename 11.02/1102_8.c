@@ -13,7 +13,14 @@ int mypowerk(int n, int k) {
     else {
         return n;
     }
-    //答案，一个道理
+
+    //简化：
+    /*if (k > 1) {
+        return n * my_power(n, k - 1);
+    }
+    return n;*/
+
+    //答案，一个道理，但是答案是先列出来分段公式再写，更清晰！！！！！！！！！！！
     /*if (k == 0)
         return 1;
     else if (k >= 1)
