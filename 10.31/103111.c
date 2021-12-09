@@ -12,6 +12,16 @@ int is_leap_year(int year) {
     if (year % 400 == 0) {
         return 1;
     }
+
+    //¼ò»¯£º
+    /*if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+        return 1;
+    }*/
+
+    //ÓÅ»¯£º
+    if ((0 == year % 4 && 0 != year % 100) || (0 == year % 400)) {
+        return 1;
+    }
     return 0;
 }
 
