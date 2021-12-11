@@ -10,7 +10,7 @@ int main() {
     int b = 100;
     int count = 0;
     int i = 0;
-    for (i = a; i < b; i++) {
+    for (i = a; i <= b; i++) {
         if (i % 10 == 9) {
             count++;
         }

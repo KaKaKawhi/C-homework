@@ -69,7 +69,7 @@ int main()
     //int num = 99;
     //int user = 0;
     //int count = 0;//¼ÆÊý
-    //while ((scanf("%d", &user)) != EOF) {
+    //while ((scanf("%d", &user)) != EOF) {    
     //    count++;
     //    if (num == user) {
     //        printf("²Â¶ÔÀ²");
