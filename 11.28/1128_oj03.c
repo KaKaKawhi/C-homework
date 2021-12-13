@@ -38,3 +38,33 @@ int main() {
 
     return 0;
 }
+
+// 版本2：
+//int main() {
+//
+//    while (1) {
+//        int n = 7;
+//        int sum = 0;
+//        // 起始值max存成绩范围最小的0，min存成绩范围最大的100
+//        int max = 0;
+//        int min = 100;
+//        int grade = 0;
+//        while (n) {
+//            scanf("%d", &grade);
+//            if (grade > max) {
+//                max = grade;
+//            }
+//            if (grade < min) {
+//                min = grade;
+//            }
+//            sum += grade;
+//            n--;
+//        }
+//
+//        sum = sum - max - min;
+//        //   /5.0
+//        printf("%.2lf\n", sum / 5.0);
+//    }
+//
+//    return 0;
+//}

@@ -9,7 +9,9 @@ int find(int n, int arr[],int length) {
     int left = 0;
     int right = length-1;
     int tmp = 0;
+    // right位置有数据，必须要添加 = 号
     while (left <= right) {
+        // 求中间位置的方法，直接相加除2容易造成溢出
         tmp = left + (right - left) / 2;
         if (arr[tmp] > n) {
             right = tmp - 1;
