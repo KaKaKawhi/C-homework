@@ -14,6 +14,12 @@ int main() {
         sec %= 3600;
         min = sec / 60;  //一分钟为60秒，sec%3600/60 除了被截去的小时数后的秒数里有多少个60
         sec %= 60;       //除了被劫去的小时和分钟后剩下的，sec%3600%60
+
+        //优化：
+        /*hour = sec / 3600;
+        min = sec % 3600 / 60;
+        sec = sec % 3600 % 60;*/
+
         printf("%d %d %d", hour, min, sec);
     }
     else {
@@ -23,3 +29,14 @@ int main() {
     return 0;
 }
 
+// 答案：
+//int main()
+//{
+//    int sec = 0;
+//    scanf("%d", &sec);
+//    int h = sec / 60 / 60;
+//    int m = sec / 60 % 60;
+//    int s = sec % 60;
+//    printf("%d %d %d\n", h, m, s);
+//    return 0;
+//}

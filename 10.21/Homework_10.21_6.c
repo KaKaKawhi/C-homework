@@ -20,6 +20,19 @@ int main() {
     }
     printf("%.1lf\n", sum / 5.0); //5.0    小数在内存中很难保存（二进制）
 
+
+    // 优化：
+    int sum = 0;
+    int i = 0;
+    // 为了提醒最后输出的是double类型，double类型和int类型运算会发生算术提升,int转为double类型，具体见5-操作符详解
+    double flag = 1.0;      //!!!!!!!!!!!!!!!!!!!
+    int n = 0; 
+    for (i = 0; i < 5; i++) {
+        scanf("%d", &n);
+        sum += n;
+    }
+    printf("%.1lf\n", (sum * flag) / 5);   //!!!!!!!!!!!!!!!!!!!
+
     return 0;
 }
 

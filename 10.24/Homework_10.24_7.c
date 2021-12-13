@@ -5,12 +5,14 @@
 int main() {
 
 
-	//答案用的是换位置的形式来实现
+	
 	int a = 0;
 	int b = 0;
 	int c = 0;
 	scanf("%d %d %d", &a, &b, &c);
-	if (a > b && a > c) {
+
+	// 个人方法：通过排序打印，可以用冒泡排序，但3个数没必要
+	/*if (a > b && a > c) {
 		if (b > c) {
 			printf("%d %d %d", a, b, c);
 		}
@@ -33,7 +35,25 @@ int main() {
 		else {
 			printf("%d %d %d",c,b,a);
 		}
+	}*/
+
+	//答案法：换位置的形式来实现，更清晰
+	if (a < b) {
+		int tmp = a;
+		a = b;
+		b = tmp;
 	}
+	if (a < c) {
+		int tmp = a;//不同代码块重名变量不影响
+		a = c;
+		c = tmp;
+	}
+	if (b < c) {
+		int tmp = b;
+		b = c;
+		c = tmp;
+	}
+	printf("%d %d %d", a, b, c);
 
 	return 0;
 }

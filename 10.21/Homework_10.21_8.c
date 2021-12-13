@@ -16,7 +16,7 @@ int main() {
     n /= 10;
     printf("%d", n % 10);*/
 
-    while (n) {          //循环实现
+    while (n) {          //循环实现！！！！！！！要有这个思想
         printf("%d", n % 10);
         n /= 10;
     }

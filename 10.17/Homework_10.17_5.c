@@ -16,5 +16,14 @@ int main()
     printf("    *  *    ");
     printf("\n");
     printf("    *  *    ");
+
+    //”≈ªØ£∫
+    printf("     **\n");
+    printf("     **\n");
+    printf("************\n");
+    printf("************\n");
+    printf("    *  *\n");
+    printf("    *  *\n");
+
 }
 
