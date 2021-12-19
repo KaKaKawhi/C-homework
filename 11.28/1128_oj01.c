@@ -82,3 +82,40 @@ int main() {
 
     return 0;
 }
+
+//二刷
+#include <stdio.h>
+
+int main() {
+
+    // 多组输入
+    int n = 0;
+    while (~scanf("%d", &n)) {
+        // 先打印实心的
+        // 控制行数
+        int i = 0;
+        // 控制每行的打印
+        int j = 0;
+        for (i = 1; i <= n; i++) {
+            for (j = 1; j <= i; j++) {
+                //printf("* ");//实心
+                //转化为打印空心,j <= i变为i-1
+                if (i < n) {
+                    if ((j == 1) || (j == i)) {
+                        printf("* ");
+                    }
+                    else {
+                        printf("  ");
+                    }
+                }
+                else {
+                    printf("* ");  //可以和上面的打印* 用||结合起来
+                }
+
+            }
+            printf("\n");
+        }
+    }
+
+    return 0;
+}
