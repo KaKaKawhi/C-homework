@@ -39,3 +39,35 @@ int main() {
     return 0;
 }
 
+
+
+// 模拟用户登陆情景，并且只能登陆三次（只允许输入三次密码，
+// 如果密码正确则提示登录成功，如果三次均错误，则退出程序）
+// 二刷
+ 
+int main() {
+
+    char str[20] = { 0 };  //这个初始化可以初始化为""（空字符串）
+    char pass[] = "abc123456";
+    int count = 3;
+    // 判断登陆成功指标
+    int index = 0;
+    int i = 0;
+    for (i = 0; i < count; i++) {
+        printf("请输入密码\n");
+        scanf("%s", str);
+        if (0 == strcmp(str, pass)) {
+            printf("登录成功\n");
+            index = 1;
+            break;
+        }
+        else {
+            printf("输入错误，请重新输入\n");
+        }
+    }
+    if (0 == index) {
+        printf("登录失败\n");
+    }
+
+    return 0;
+}

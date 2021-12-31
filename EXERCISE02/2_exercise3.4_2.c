@@ -32,3 +32,42 @@ int main() {
     return 0;
 }
 
+
+//二刷
+//int fak(int n) {
+//	int ret = 1;
+//	int i = 1;
+//	for (i = n; i >= 1; i--) {
+//		ret *= i;
+//	}
+//	return ret;
+//}
+//
+//int main() {
+//
+//	int count = 10;
+//	int sum = 0;
+//	int i = 0;
+//	for (i = 1; i <= count; i++) {
+//		sum += fak(i);
+//	}
+//	printf("%d\n", sum);
+//
+//	return 0;
+//}
+
+// 看一眼提示：没必要每次都从1开始求阶乘，2！= 1! * 2
+int main() {
+
+    int n = 10;
+    int sum = 0;
+    int fak = 1;
+    int i = 0;
+    for (i = 1; i <= 10; i++) {
+        fak *= i;
+        sum += fak;
+    }
+    printf("%d\n", sum);
+
+    return 0;
+}

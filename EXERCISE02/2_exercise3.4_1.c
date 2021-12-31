@@ -2,7 +2,7 @@
 
 #include<stdio.h>
 
-//计算n的阶乘
+// 计算n的阶乘
 int main() {
 
     int n = 0;
@@ -17,3 +17,17 @@ int main() {
     return 0;
 }
 
+// 二刷
+int main() {
+
+	int n = 0;
+	scanf("%d", &n);
+	int res = 1;
+	int i = 1;
+	for (i = n; i >= 1; i--) {
+		res *= i;
+	}
+	printf("%d\n", res);
+
+	return 0;
+}
