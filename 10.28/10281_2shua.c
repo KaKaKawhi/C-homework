@@ -78,21 +78,21 @@ int main() {
 
 
 //¼ò½à°æ£º
-int main() {
-
-    int num = 188;
-    int user = 0;
-    while (scanf("%d", &user) != EOF) {
-        if (user == num) {
-            printf("bingo\n");
-        }
-        else if(user > num) {
-            printf("too big\n");
-        }
-        else {
-            printf("too small\n");
-        }
-    }
-
-    return 0;
-}
+//int main() {
+//
+//    int num = 188;
+//    int user = 0;
+//    while (scanf("%d", &user) != EOF) {
+//        if (user == num) {
+//            printf("bingo\n");
+//        }
+//        else if(user > num) {
+//            printf("too big\n");
+//        }
+//        else {
+//            printf("too small\n");
+//        }
+//    }
+//
+//    return 0;
+//}

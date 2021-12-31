@@ -2,6 +2,7 @@
 
 #include <stdio.h>
 #include <time.h>
+#include <stdlib.h>
 
 //猜数字，循环玩，1继续，0退出，大了小了提醒
 
