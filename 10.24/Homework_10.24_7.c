@@ -2,10 +2,13 @@
 
 #include<stdio.h>
 
+//写代码将三个整数数按从大到小输出。
+//例如：
+//输入：2 3 1
+//输出：3 2 1
+
 int main() {
 
-
-	
 	int a = 0;
 	int b = 0;
 	int c = 0;
@@ -58,3 +61,29 @@ int main() {
 	return 0;
 }
 
+// 冒泡排序（用到数组）
+
+int main() {
+
+	int arr[3] = { 0 };
+	int len = sizeof(arr) / sizeof(arr[0]);
+	int i = 0;
+	for (i = 0; i < len; i++) {
+		scanf("%d", &arr[i]);
+	}
+	int j = 0;
+	for (i = 0; i < len - 1; i++) {
+		for (j = 0; j < len - 1 - i; j++) {
+			if (arr[j] < arr[j + 1]) {
+				int tmp = arr[j];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = tmp;
+			}
+		}
+	}
+	for (i = 0; i < len; i++) {
+		printf("%d ", arr[i]);
+	}
+
+	return 0;
+ }

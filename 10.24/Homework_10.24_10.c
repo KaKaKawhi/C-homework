@@ -2,6 +2,8 @@
 
 #include<stdio.h>
 
+//打印1000年到2000年之间的闰年
+
 int main() {
 
 	int a = 1000;
@@ -16,3 +18,17 @@ int main() {
 	return 0;
 }
 
+// 三刷（二刷见笔记）
+int main() {
+
+	int start = 1000;
+	int end = 2000;
+	int i = 0;
+	for (i = start; i <= end; i++) {
+		if (((i % 4 == 0) && (i % 100 != 0)) || (i % 400 == 0)) {
+			printf("%d ", i);
+		}
+	}
+
+	return 0;
+}
