@@ -18,3 +18,18 @@ int main()
     return 0;
 }
 
+
+// 三刷（二刷见笔记）
+void add(int* num) {
+    (*num)++;
+}
+
+int main()
+{
+    int num = 0;
+    scanf("%d", &num);
+    add(&num);
+    printf("%d\n", num);
+
+    return 0;
+}

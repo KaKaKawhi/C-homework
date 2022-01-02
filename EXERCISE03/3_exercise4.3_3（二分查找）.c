@@ -27,6 +27,7 @@ int binary_search(int arr[],int n,int length) {
     else {
         return tmp;
     }
+    //else 带着更清晰
 }
 
 int main()
