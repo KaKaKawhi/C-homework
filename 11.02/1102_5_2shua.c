@@ -25,7 +25,7 @@ int my_strlen(char str[]) {
     char* mask = str;
     //最好写成'\0' != *mask
     if (*mask != '\0') {  
-        return 1 + my_strlen(mask + 1);
+        return 1 + my_strlen(mask + 1);  //优化见3shua
     }
     return 0;
 }

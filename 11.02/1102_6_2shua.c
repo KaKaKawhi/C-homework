@@ -16,7 +16,8 @@ int my_strlen(char str[]) {
 }
 
 // 递归:
-// 规律：首先左指针指向首元素，右指针指向'\0'前面一个元素，交换，然后左指针右移一位，右指针左移一位，然后重复
+// 规律：首先左指针指向首元素，右指针指向'\0'前面一个元素，交换，
+//       然后左指针右移一位，右指针左移一位，然后重复
 // 限定条件：左指针小于右指针
 // 接近限定条件：然后左指针右移一位，右指针左移一位
 void reverse_string(char str[]) {
@@ -38,6 +39,8 @@ void reverse_string(char str[]) {
     char tmp = *str;
     //必须写出来，不能用一次调用一次，因为之后str的长度已经发生变化了
     int len = my_strlen(str); 
+    
+    // 第一次交换 
     *str = *(str + len - 1);
     *(str + len - 1) = '\0';
 
@@ -45,6 +48,7 @@ void reverse_string(char str[]) {
         reverse_string(str);
     }
 
+    // 这里才将第一次交换彻底完成
     *(str + len - 1) = tmp;
 }
 
