@@ -29,7 +29,12 @@ int main()
 {
     int year = 0;
     scanf("%d", &year);
-    if (is_leap_year(year) == 1) {
+
+    //if (is_leap_year(year) == 1) {
+    // 直接写为if (is_leap_year(year))，根据函数返回值作为条件表达式的
+    // 逻辑结果（无需计算），然后逻辑判定即可。
+
+    if (is_leap_year(year))
         printf("是闰年");
     }
     else {
