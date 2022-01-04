@@ -121,3 +121,17 @@ int main()
 
     return 0;
 }
+
+
+//未使用递归方式：
+//void reverse_string(char* arr) {
+//    int left = 0;                //也可以用指针
+//    int right = My_Strlen(arr) - 1;
+//    while (left < right) {
+//        char mask = arr[left]; 
+//        arr[left] = arr[right];
+//        arr[right] = mask;
+//        left++;
+//        right--;
+//    }
+//}
