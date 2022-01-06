@@ -37,14 +37,16 @@ void reverse(char * p, int length) {
 //        char temp = *left;
 //        *left = *right;
 //        *right = temp;
-//        ++left;      //不知道为啥前置++，应该效果一样，讲的后置
+//        //不知道为啥前置++，应该效果一样，讲的后置-->
+//        回答：没有接收或者使用时，前置后置都一样
+//        ++left;      
 //        --right;
 //    }
 //}
 
-int main() {
+int main() { //不好，见3shua
 
-    char arr[] = "abcdef";  //如果要手动输入要用gets（），因为如果需要的字符串有空格，scanf遇到空格就停止
+    char arr[] = "abcdef";  //如果要手动输入要用gets（），因为如果需要的字符串有空格，scanf输入格式设置为%s，按照字符串格式读入，遇到空格就停止
     int length = sizeof(arr) / sizeof(arr[0]);  //这个元素个数包含了\0 
     reverse(arr,length);  //也可以不用传入length，用strlen函数
 
@@ -65,7 +67,7 @@ int main() {
 //                  //功能: 函数拷贝ch 到buffer 从头开始的count 个字符里, 并返回buffer指针。 
 //                  //memset() 可以应用在将一段内存初始化为某个值。例如：
 //                  //memset(the_array, '\0', sizeof(the_array));
-//                  //这是将一个数组的所以分量设置成零的很便捷的方法。
+//                  //这是将一个数组的所有分量设置成零的很便捷的方法。
 //    }
 //    return 0;
 //}
