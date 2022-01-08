@@ -14,7 +14,7 @@ int main() {
             printf("Even\n");  //oj小心，必须加换行才格式一样
             //break;    不需要break，条件分叉，执行了这个就不执行另外一个，就结束了
         }
-        else {  //n % 2只可能为0 或 1
+        else {  //n % 2只可能为0 或 1!!!!!!!!!!!!!!!!!!!!!!!
             printf("Odd\n");    //oj小心，必须加换行才格式一样
             //break;     同上
         }
@@ -24,3 +24,40 @@ int main() {
     return 0;
 }
 
+
+//oj
+//#include <stdio.h>
+//
+//int main() {
+//
+//    int n = 0;
+//    while ((scanf("%d", &n)) != EOF) {
+//        if (n % 2 == 0) {
+//            printf("Even\n");
+//        }
+//        else {
+//            printf("Odd\n");
+//        }
+//    }
+//
+//    return 0;
+//}
+
+
+// oj优化
+#include <stdio.h>
+
+int main() {
+
+    int n = 0;
+    while (~scanf("%d", &n)) {
+        if (n % 2) {
+            printf("Odd\n");
+        }
+        else {
+            printf("Even\n");
+        }
+    }
+
+    return 0;
+}

@@ -74,3 +74,36 @@ int main() {
 //
 //    return 0;
 //}
+
+
+//三刷oj版
+
+#include<stdio.h>
+#include<string.h>
+
+int main() {
+
+    char str[] = "A, E, I ,O ,U, a, e, i, o, u";
+    char c = 0;
+    while (~scanf("%c", &c)) {
+        getchar();
+        // 判定和某个元音字母相同的指标
+        int index = 0;
+        int len = strlen(str);
+        int i = 0;
+        for (i = 0; i < len; i++) {
+            if (str[i] == c) {
+                index = 1;
+                break;
+            }
+        }
+        if (index) {
+            printf("Vowel\n");
+        }
+        else {
+            printf("Consonant\n");
+        }
+    }// 多组输入结尾
+
+    return 0;
+}
