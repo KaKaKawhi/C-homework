@@ -1,8 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 
 #include <stdio.h>
-//#include <math.h>
-//#include <string.h>
 
 // 喝汽水，1瓶汽水1元，2个空瓶可以换一瓶汽水，给20元，可以多少汽水（编程实现）。
 
@@ -11,11 +9,13 @@ int main()
     int money = 20;
     int emp_count = 0;//空瓶数
     int cola_count = 0;//可获得的汽水数
-    cola_count = 20;
+    cola_count = money / 1;
     int mask = cola_count;//代替原始可获得汽水数来计算
     while (mask) {
+		// 喝一瓶
         mask--;
         emp_count++;
+		// 空瓶数一旦为2就将他换掉
         if (2 == emp_count) {
             cola_count++;
             mask++;
@@ -51,7 +51,7 @@ int main()
 		total += empty / 2;				//新增的空瓶数
 		empty = empty / 2 + empty % 2;  //新增的空瓶数加剩下的空瓶数
 	}
-
+	printf("%d\n", total);
 
 	return 0;
 }
@@ -83,3 +83,25 @@ int main()
 
 	return 0;
 }
+
+
+
+// 3shua自己写的错误代码，最后会少算一个，因为最后肯定还
+// 会剩下一个空瓶，自己的代码将空瓶和自己获得汽水数混淆
+int main(void)
+{
+	int money = 0;
+	scanf("%d", &money);
+	int num = money / 1;
+	int sum = num;
+	while (num) {
+		sum += num / 2;
+		num /= 2;
+	}
+	printf("%d\n", sum);
+
+	return 0;
+}
+
+
+// 3shua改正不会
