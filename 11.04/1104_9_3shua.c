@@ -37,7 +37,7 @@ void Bubble_Sort(int arr[], int len) {
                 index = 1;
             }
         }
-        //简写：（不知道简写是好事好还是坏事）if (!index) {
+        //简写：（不知道简写是好事好还是坏事）if (!index) { 越简单且越清晰易懂越好，以后进公司水平高
         if (0 == index){
             // 说明该数字后面的所有数字已经有序，无需交换
             return;

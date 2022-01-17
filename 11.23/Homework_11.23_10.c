@@ -14,28 +14,28 @@
 //示例2
 //输入：123 输出：101
 
-int main() {
+//int main() {
+//
+//    int n = 0;
+//    scanf("%d", &n);
+//    int count = 0;
+//    int size = 1;
+//    while (n) {
+//        if ((n % 10) % 2 == 0) {
+//            size *= 10;
+//        }
+//        else if ((n % 10) % 2 != 0) {
+//            count += size * 1;
+//            size *= 10;
+//        }
+//        n /= 10;
+//    }
+//    printf("%d", count);
+//
+//    return 0;
+//}
 
-    int n = 0;
-    scanf("%d", &n);
-    int count = 0;
-    int size = 1;
-    while (n) {
-        if ((n % 10) % 2 == 0) {
-            size *= 10;
-        }
-        else if ((n % 10) % 2 != 0) {
-            count += size * 1;
-            size *= 10;
-        }
-        n /= 10;
-    }
-    printf("%d", count);
-
-    return 0;
-}
-
-//答案法
+//答案法（和老师讲的一样，更清晰）
 //#include <stdio.h>
 //#include <math.h>
 //
@@ -61,3 +61,28 @@ int main() {
 //    printf("%d\n", sum);
 //    return 0;
 //}
+
+
+// 开课讲后再写的
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+
+    int n = 0;
+    scanf("%d", &n);
+    int sum = 0;
+    int count = 0;
+    while (n) {
+        // 相当if(1 == (n % 10 % 2)或if(0 != (n % 10 % 2)
+        if (n % 10 % 2) {
+            sum += 1 * pow(10, count);
+        }
+        // 为偶数的时候跳过该位，最后该位就为0，但是这样不够清晰
+        n /= 10;
+        count++;
+    }
+    printf("%d\n", sum);
+
+    return 0;
+}

@@ -89,3 +89,56 @@ int main() {
 //    }
 //    return 0;
 //}
+
+// 开课讲后再写的
+int main()
+{
+    int n = 0;
+    scanf("%d", &n);
+    int arr[100000] = { 0 };
+    int i = 0;
+    // 记录输入的最大数字
+    int max = 0;
+    while (n) {
+        scanf("%d", &i);
+        arr[i] = i;
+        if (i > max) {
+            max = i;
+        }
+        n--;
+    }
+    for (i = 0; i <= max; i++) {
+        if (0 != arr[i]) {
+            printf("%d ", arr[i]);
+        }
+    }
+
+    return 0;
+}
+
+
+// 老师讲：（(1 ≤ n ≤ 105，1 ≤ k ≤ n)，所以不用求输入的最大数，因为输入的数字最大为n）
+
+// 或者编译器支持C99可以使用动态内存arr[n]
+int arr[100001] = { 0 };// 放为全局变量，对栈区的浪费少
+
+int main()
+{
+    // 输入
+    int n = 0;
+    scanf("%d", &n);
+    int i = 0;
+    int k = 0;
+    for (i = 0; i < n; i++) {
+        scanf("%d", &k);
+        arr[k] = k;
+    }
+    // 输出
+    for (i = 0; i <= n; i++) {
+        if (0 != arr[i]) {
+            printf("%d ", arr[i]);
+        }
+    }
+
+    return 0;
+}

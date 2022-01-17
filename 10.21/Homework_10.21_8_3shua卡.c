@@ -24,3 +24,20 @@ int main() {
     return 0;
 }
 
+
+// 2´ÎÈıË¢´íÌâ
+//void Re_Pri(int n) {
+//    while (n) {
+//        printf("%d", n % 10);
+//        n /= 10;
+//    }
+//}
+//
+//int main()
+//{
+//    int n = 0;
+//    scanf("%d", &n);
+//    Re_Pri(n);
+//
+//    return 0;
+//}

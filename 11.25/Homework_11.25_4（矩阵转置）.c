@@ -22,22 +22,20 @@ int main() {
     int m = 0;
     int n = 0;
     scanf("%d %d", &n, &m);
-    int arr[10][10] = { 0 };  //不能用变量定义数组
-    if (n >= 1 && n <= 10 && m >= 1 && m <= 10) {
-        int i = 0;
-        int j = 0;
-        for (i = 0; i < n; i++) {
-            for (j = 0; j < m; j++) {
-                scanf("%d ", &arr[i][j]);
-            }
+    int arr[10][10] = { 0 };  //不能用变量定义数组，如果编译器支持C99标准，可使用
+    int i = 0;
+    int j = 0;
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < m; j++) {
+            scanf("%d ", &arr[i][j]);
         }
-        //转置
-        for (i = 0; i < m; i++) {
-            for (j = 0; j < n; j++) {   //行列交换
-                printf("%d ", arr[j][i]);  //行列交换，先打印之前输入数组的第一列
-            }
-            printf("\n");
+    }
+    //转置
+    for (i = 0; i < m; i++) {
+        for (j = 0; j < n; j++) {   //行列交换
+            printf("%d ", arr[j][i]);  //行列交换，先打印之前输入数组的第一列
         }
+        printf("\n");
     }
 
     return 0;

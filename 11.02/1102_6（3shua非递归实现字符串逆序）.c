@@ -6,6 +6,7 @@
 int My_Strlen(char str[]) {
     char* mask = str;
     //最好写成'\0' != *mask
+    // 优化：最好写成if(*mask)
     if (*mask != '\0') {
         return 1 + My_Strlen(mask + 1);
     }
